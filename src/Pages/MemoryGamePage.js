@@ -13,6 +13,7 @@ const Transition = forwardRef(function Transition(props, ref) {
 });
  
 const MemoryGamePage = () => {
+  console.log("test");
   const [gameSize, setGameSize] = useState(4);
   const [cards, setCards] = useState([]);
   const [flippedCards, setFlippedCards] = useState([]);
@@ -156,7 +157,7 @@ const MemoryGamePage = () => {
             <div className="text-2xl font-bold">You Won!!! Congratulations🎉🎉🎉</div>
           </div>
         </div>
-        <button onClick={handleConfetti}>HHh</button>
+        {/* <button onClick={handleConfetti}>HHh</button> */}
         <GameInfo bestScore={bestScore} score={movesMade} onReset={handleResetCards} onClickhowtoplay ={onClickhowtoplay}/>
       </div>
       {/* Game */}
