@@ -114,7 +114,7 @@ const MemoryGamePage = () => {
     let allMatched = cards.every((ele)=>ele.isMatched === true);
     if(cards.length>0 && allMatched){
       // console.log("test -", allMatched, cards);
-      let best_score = localStorage.getItem("best_score");
+      let best_score = localStorage.getItem("best_score") || 999999999;
       if(best_score && !isNaN(parseFloat(best_score)) && parseFloat(best_score)>movesMade ){
         localStorage.setItem("best_score", movesMade);
       }
