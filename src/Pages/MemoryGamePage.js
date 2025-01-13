@@ -13,7 +13,6 @@ const Transition = forwardRef(function Transition(props, ref) {
 });
  
 const MemoryGamePage = () => {
-  console.log("test");
   const [gameSize, setGameSize] = useState(4);
   const [cards, setCards] = useState([]);
   const [flippedCards, setFlippedCards] = useState([]);
@@ -172,7 +171,7 @@ const MemoryGamePage = () => {
                   className={`size-16 md:size-20 card ${(ele.isFlipped || ele.isMatched) ? "flipped": ""}`}
                 >
                   <div className={`card-inner flex-center-items rounded-xl shadow-xl  ${ele.isFlipped ? (ele.isMatched ? "bg-emerald-600" : (flippedCards.length === 2 ? "bg-red-600" :"bg-sky-600")) : "bg-[#e5e7eb]" }`}>
-                    <div className="card-front flex-center-items">? {ele.val }</div>
+                    <div className="card-front flex-center-items">?</div>
                     <div className="card-back flex-center-items">{ele.isFlipped ? ele.val : ""}</div>
                   </div>
                 </div>
